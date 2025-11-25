@@ -258,3 +258,40 @@ body {
         text-align: center;
     }
   }
+
+/* Enhanced Social Links */
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+}
+
+/* Mobile Optimization for Social Links */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .social-links a {
+        width: 200px;
+        text-align: center;
+    }
+}
