@@ -1,135 +1,238 @@
-    <section id="contact" class="contact-preview">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            ...
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Iniubong Ebong — Web3 Developer & Cybersecurity Specialist</title>
+  <meta name="description" content="Iniubong Ebong — Web3 Creator, Cybersecurity Learner, Entrepreneur. Projects: PayGuard AI, AI Genesis Automation, TownPlanPay" />
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --muted: #6b7280;
+      --accent-1: #6d28d9;
+      --accent-2: #8b5cf6;
+      --card: #f8fafc;
+      --max-width: 1100px;
+      --radius: 10px;
+      --shadow: 0 6px 18px rgba(16,24,40,0.06);
+      --glass: rgba(255,255,255,0.8);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#fbfdff);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    .site{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:0 1rem;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:1rem 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      text-decoration:none;
+      color:inherit;
+    }
+    .logo{
+      width:52px;height:52px;border-radius:50%;
+      background:linear-gradient(135deg,var(--accent-1),var(--accent-2));
+      display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:600;
+      box-shadow:var(--shadow);
+    }
+
+    nav{display:flex;gap:1rem;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .btn{
+      display:inline-block;padding:.5rem .85rem;border-radius:8px;text-decoration:none;font-weight:600;
+      border:1px solid transparent;
+    }
+    .btn-primary{
+      background:linear-gradient(90deg,var(--accent-1),var(--accent-2));
+      color:white;
+      box-shadow:0 8px 20px rgba(99,102,241,0.12);
+    }
+    .btn-outline{
+      background:transparent;color:var(--accent-1);border:1px solid rgba(107,33,168,0.12);
+    }
+
+    .hero{
+      margin-top:1.25rem;
+      padding:3.25rem 1rem;
+      border-radius:var(--radius);
+      background:linear-gradient(180deg,rgba(139,92,246,0.88),rgba(109,40,217,0.9));
+      color:#fff;
+      text-align:center;
+      box-shadow:var(--shadow);
+    }
+    .hero h1{margin:0;font-size:1.75rem}
+    .hero p.lead{margin:.5rem 0 1.25rem;color:rgba(255,255,255,0.9)}
+
+    .stats{
+      display:flex;gap:1rem;justify-content:center;margin-top:1rem;color:rgba(255,255,255,.95);
+      flex-wrap:wrap;
+    }
+    .stat{min-width:7rem;text-align:center}
+
+    main{margin:2.5rem 0}
+    .section-title{font-size:1.25rem;font-weight:700;margin-bottom:.75rem;text-align:center}
+
+    .projects{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;
+    }
+    .card{
+      background:var(--card);padding:1rem;border-radius:12px;box-shadow:var(--shadow);
+    }
+    .card h3{margin:.25rem 0 .5rem}
+    .tech-tags{display:flex;gap:.5rem;flex-wrap:wrap}
+    .tag{background:#eef2ff;color:#3730a3;padding:.25rem .5rem;border-radius:8px;font-size:.8rem}
+
+    .contact{
+      margin-top:2rem;padding:2rem;border-radius:12px;background:#f3f4f6;text-align:center;
+    }
+    .contact p{margin:.5rem auto 1rem;color:var(--muted)}
+    footer{
+      margin-top:2rem;padding:1.25rem 0;color:var(--muted);text-align:center;font-size:.9rem;
+    }
+    .social{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem}
+    .social a{color:var(--muted);text-decoration:none;padding:.35rem .6rem;border-radius:6px;border:1px solid rgba(15,23,42,0.04);font-weight:600}
+
+    /* Responsive tweaks */
+    @media (min-width:720px){
+      .hero{padding:4rem}
+      .hero h1{font-size:2rem}
+    }
+    @media (max-width:540px){
+      header{padding:.5rem 0}
+      .logo{width:44px;height:44px}
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header aria-label="Site header">
+      <a class="brand" href="/">
+        <div class="logo" aria-hidden="true">IE</div>
+        <div>
+          <div style="font-weight:700">Iniubong Ebong</div>
+          <div style="font-size:.85rem;color:var(--muted)">Web3 Creator · Cybersecurity Learner</div>
         </div>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-outline" href="https://github.com/Wiper15" target="_blank" rel="noopener">🐙 GitHub</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Iniubong Ebong</h1>
+      <p class="lead">Building the future of digital payments and Web3 solutions. Currently developing PayGuard AI and exploring cybersecurity.</p>
+
+      <div class="stats" role="list">
+        <div class="stat" role="listitem"><strong>3+</strong><div style="font-size:.85rem">Active Projects</div></div>
+        <div class="stat" role="listitem"><strong>22</strong><div style="font-size:.85rem">Recent Commits</div></div>
+        <div class="stat" role="listitem"><strong>Web3</strong><div style="font-size:.85rem">Specialization</div></div>
+        <div class="stat" role="listitem"><strong>AI</strong><div style="font-size:.85rem">Integration</div></div>
+      </div>
+
+      <div style="margin-top:1.25rem">
+        <a class="btn btn-primary" href="#projects">View My Projects</a>
+        <a class="btn btn-outline" href="#contact" style="margin-left:.6rem">Hire Me</a>
+      </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Iniubong Ebong. Web3 Developer & Cybersecurity Specialist.</p>
-            <div class="social-links">
-                ...
+    <main>
+      <section id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section-title">My Projects</h2>
+
+        <div class="projects" role="list">
+          <article class="card" role="listitem" aria-labelledby="p-payguard">
+            <h3 id="p-payguard">PayGuard AI</h3>
+            <p>AI agent that mints Solana NFTs as immutable proof when salary is late.</p>
+            <div class="tech-tags" aria-hidden="true">
+              <span class="tag">Python</span>
+              <span class="tag">Solana</span>
+              <span class="tag">AI</span>
             </div>
+            <p style="margin-top:.6rem"><a href="https://github.com/Wiper15/payguard-ai" target="_blank" rel="noopener">View on GitHub →</a></p>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="p-ai-genesis">
+            <h3 id="p-ai-genesis">AI Genesis Automation</h3>
+            <p>Automation workflows with advanced AI capabilities for operations and testing.</p>
+            <div class="tech-tags" aria-hidden="true">
+              <span class="tag">Automation</span>
+              <span class="tag">AI</span>
+              <span class="tag">Python</span>
+            </div>
+            <p style="margin-top:.6rem"><a href="https://github.com/Wiper15/ai-genesis" target="_blank" rel="noopener">View on GitHub →</a></p>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="p-townplan">
+            <h3 id="p-townplan">TownPlanPay</h3>
+            <p>Digital payment solutions with milestone tracking and smart-contract integration.</p>
+            <div class="tech-tags" aria-hidden="true">
+              <span class="tag">Web3</span>
+              <span class="tag">Payments</span>
+              <span class="tag">Smart Contracts</span>
+            </div>
+            <p style="margin-top:.6rem"><a href="https://github.com/Wiper15/wipernation-townplanpay" target="_blank" rel="noopener">View on GitHub →</a></p>
+          </article>
         </div>
+      </section>
+
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title">Get In Touch</h2>
+        <p>Ready to work together? Let's build something amazing.</p>
+        <div>
+          <a class="btn btn-primary" href="mailto:ebonginiubong9@gmail.com">📧 Email Me</a>
+          <a class="btn btn-outline" href="https://github.com/Wiper15" style="margin-left:.6rem" target="_blank" rel="noopener">🐙 My GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div style="font-weight:600">© 2024 Iniubong Ebong. Web3 Developer & Cybersecurity Specialist.</div>
+      <div class="social" role="navigation" aria-label="Social links">
+        <a href="https://github.com/Wiper15" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/iniubong-ebong-a82900362" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/share/14QuQgwgwoq/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://x.com/wipernation1" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://www.tiktok.com/@wipernation1" target="_blank" rel="noopener">TikTok</a>
+        <a href="mailto:ebonginiubong9@gmail.com">Email</a>
+      </div>
     </footer>
+  </div>
+
+  <script>
+    // Minimal JS: smooth scrolling for intra-page links
+    (function(){
+      document.querySelectorAll('a[href^="#"]').forEach(function(a){
+        a.addEventListener('click', function(e){
+          var target = document.querySelector(this.getAttribute('href'));
+          if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'}); }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
-
-    <h3>TownPlanPay</h3>
-    <p>Digital payment solutions with milestone tracking</p>
-    ...
-    <section id="contact" class="contact-preview" style="padding: 80px 0; background: #f8f9fa;">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 2rem;">Get In Touch</h2>
-            ...                        <span class="tech-tag">Web3</span>
-                        <span class="tech-tag">Payments</span>
-                        <span class="tech-tag">Smart Contracts</span>
-                    </div>
-                    <a href="https://github.com/Wiper15/wipernation-townplanpay" class="project-link">View on GitHub →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-preview">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-content">
-                <p>Ready to work together? Let's build something amazing!</p>
-                <div class="contact-buttons">
-                    <a href="mailto:ebonginiubong9@gmail.com" class="btn btn-primary">📧 Email Me</a>
-                    <a href="https://github.com/Wiper15" class="btn btn-outline">🐙 My GitHub</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Iniubong Ebong. Web3 Developer & Cybersecurity Specialist.</p>
-            <div class="social-links">
-                <a href="https://github.com/Wiper15">GitHub</a>
-                <a href="https://www.linkedin.com/in/iniubong-ebong-a82900362?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn</a>
-                <a href="https://www.facebook.com/share/14QuQgwgwoq/">Facebook</a>
-                <a href="https://x.com/wipernation1?t=t99HFGiJnTKOOoRSQt1rzg&s=09">Twitter</a>
-                <a href="https://www.tiktok.com/@wipernation1?_r=1&_t=ZS-91gJDZqRI40">TikTok</a>
-                <a href="mailto:ebonginiubong9@gmail.com">Email</a>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>                    <h3>TownPlanPay</h3>
-                    <p>Digital payment solutions with milestone tracking</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Web3</span>
-                        <span class="tech-tag">Payments</span>
-                        <span class="tech-tag">Smart Contracts</span>
-                    </div>
-                    <a href="https://github.com/Wiper15/wipernation-townplanpay" class="project-link">View on GitHub →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-preview" style="padding: 80px 0; background: #f8f9fa;">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 2rem;">Get In Touch</h2>
-            <div style="text-align: center;">
-                <p style="margin-bottom: 2rem; font-size: 1.2rem;">Ready to work together? Let's build something amazing!</p>
-                <a href="mailto:ebonginiubong9@gmail.com" class="btn btn-primary">📧 Email Me</a>
-                <a href="https://github.com/Wiper15" class="btn btn-outline" style="margin-left: 1rem;">🐙 My GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Iniubong Ebong. Web3 Developer & Cybersecurity Specialist.</p>
-            <div class="social-links">
-                <a href="https://github.com/Wiper15">GitHub</a>
-                <a href="https://www.linkedin.com/in/iniubong-ebong-a82900362?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn</a>
-                <a href="https://www.facebook.com/share/14QuQgwgwoq/">Facebook</a>
-                <a href="https://x.com/wipernation1?t=t99HFGiJnTKOOoRSQt1rzg&s=09">Twitter</a>
-                <a href="https://www.tiktok.com/@wipernation1?_r=1&_t=ZS-91gJDZqRI40">TikTok</a>
-                <a href="mailto:ebonginiubong9@gmail.com">Email</a>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>                    <h3>TownPlanPay</h3>
-                    <p>Digital payment solutions with milestone tracking</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Web3</span>
-                        <span class="tech-tag">Payments</span>
-                        <span class="tech-tag">Smart Contracts</span>
-                    </div>
-                    <a href="https://github.com/Wiper15/wipernation-townplanpay" class="project-link">View on GitHub →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-preview" style="padding: 80px 0; background: #f8f9fa;">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 2rem;">Get In Touch</h2>
-            <div style="text-align: center;">
-                <p style="margin-bottom: 2rem; font-size: 1.2rem;">Ready to work together? Let's build something amazing!</p>
-                <a href="mailto:your-email@example.com" class="btn btn-primary">📧 Email Me</a>
-                <a href="https://github.com/Wiper15" class="btn btn-outline" style="margin-left: 1rem;">🐙 My GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Iniubong Ebong. Web3 Developer & Cybersecurity Specialist.</p>
-            <div class="social-links">
-                <a href="https://github.com/Wiper15">GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-                <a href="mailto:your-email@example.com">Email</a>
-            </div>
-        </div>
-    </footer>
-</body>
-  </html>
