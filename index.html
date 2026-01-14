@@ -6,93 +6,139 @@
   <title>Iniubong Ebong — Web3 Developer & Cybersecurity Specialist</title>
   <meta name="description" content="Iniubong Ebong — Web3 Creator, Cybersecurity Learner, Entrepreneur. Projects: PayGuard AI, AI Genesis Automation, TownPlanPay" />
 
-  <style>
-    :root{
-      --bg: #ffffff;
-      --muted: #6b7280;
-      --accent-1: #6d28d9;
-      --accent-2: #8b5cf6;
-      --card: #f8fafc;
-      --max-width: 1100px;
-      --radius: 10px;
-      --shadow: 0 6px 18px rgba(16,24,40,0.06);
-      --glass: rgba(255,255,255,0.8);
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Iniubong Ebong — Web3 Developer & Cybersecurity Specialist" />
+  <meta property="og:description" content="Building the future of digital payments and Web3 solutions. Currently developing PayGuard AI and exploring cybersecurity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wiper15.github.io/" />
+  <meta property="og:image" content="https://wiper15.github.io/assets/og-image.svg" />
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:linear-gradient(180deg,var(--bg),#fbfdff);
-      color:#0f172a;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-    }
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/favicon.ico" />
+</head>
+<body>
+  <div class="site">
+    <header aria-label="Site header">
+      <a class="brand" href="/">
+        <div class="logo" aria-hidden="true">IE</div>
+        <div>
+          <div class="brand-name">Iniubong Ebong</div>
+          <div class="brand-sub">Web3 Creator · Cybersecurity Learner</div>
+        </div>
+      </a>
 
-    .site{
-      max-width:var(--max-width);
-      margin:0 auto;
-      padding:0 1rem;
-    }
+      <nav aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-outline" href="https://github.com/Wiper15" target="_blank" rel="noopener">🐙 GitHub</a>
+      </nav>
+    </header>
 
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:1rem 0;
-    }
+    <section class="hero" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Iniubong Ebong</h1>
+      <p class="lead">Building the future of digital payments and Web3 solutions. Currently developing PayGuard AI and exploring cybersecurity.</p>
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:.75rem;
-      text-decoration:none;
-      color:inherit;
-    }
-    .logo{
-      width:52px;height:52px;border-radius:50%;
-      background:linear-gradient(135deg,var(--accent-1),var(--accent-2));
-      display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:600;
-      box-shadow:var(--shadow);
-    }
+      <div class="stats" role="list">
+        <div class="stat" role="listitem"><strong>3+</strong><div class="stat-label">Active Projects</div></div>
+        <div class="stat" role="listitem"><strong>22</strong><div class="stat-label">Recent Commits</div></div>
+        <div class="stat" role="listitem"><strong>Web3</strong><div class="stat-label">Specialization</div></div>
+        <div class="stat" role="listitem"><strong>AI</strong><div class="stat-label">Integration</div></div>
+      </div>
 
-    nav{display:flex;gap:1rem;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600}
-    .btn{
-      display:inline-block;padding:.5rem .85rem;border-radius:8px;text-decoration:none;font-weight:600;
-      border:1px solid transparent;
-    }
-    .btn-primary{
-      background:linear-gradient(90deg,var(--accent-1),var(--accent-2));
-      color:white;
-      box-shadow:0 8px 20px rgba(99,102,241,0.12);
-    }
-    .btn-outline{
-      background:transparent;color:var(--accent-1);border:1px solid rgba(107,33,168,0.12);
-    }
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#projects">View My Projects</a>
+        <a class="btn btn-outline" href="#contact">Hire Me</a>
+      </div>
+    </section>
 
-    .hero{
-      margin-top:1.25rem;
-      padding:3.25rem 1rem;
-      border-radius:var(--radius);
-      background:linear-gradient(180deg,rgba(139,92,246,0.88),rgba(109,40,217,0.9));
-      color:#fff;
-      text-align:center;
-      box-shadow:var(--shadow);
-    }
-    .hero h1{margin:0;font-size:1.75rem}
-    .hero p.lead{margin:.5rem 0 1.25rem;color:rgba(255,255,255,0.9)}
+    <main>
+      <section id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section-title">My Projects</h2>
 
-    .stats{
-      display:flex;gap:1rem;justify-content:center;margin-top:1rem;color:rgba(255,255,255,.95);
-      flex-wrap:wrap;
-    }
-    .stat{min-width:7rem;text-align:center}
+        <div class="projects" role="list">
+          <article class="card" role="listitem" aria-labelledby="p-payguard">
+            <h3 id="p-payguard">PayGuard AI</h3>
+            <p>AI agent that mints Solana NFTs as immutable proof when salary is late.</p>
+            <div class="tech-tags" aria-hidden="true">
+              <span class="tag">Python</span>
+              <span class="tag">Solana</span>
+              <span class="tag">AI</span>
+            </div>
+            <p class="project-link"><a href="https://github.com/Wiper15/payguard-ai" target="_blank" rel="noopener">View on GitHub →</a></p>
+          </article>
 
-    main{margin:2.5rem 0}
-    .section-title{font-size:1.25rem;font-weight:700;margin-bottom:.75rem;text-align:center}
+          <article class="card" role="listitem" aria-labelledby="p-ai-genesis">
+            <h3 id="p-ai-genesis">AI Genesis Automation</h3>
+            <p>Automation workflows with advanced AI capabilities for operations and testing.</p>
+            <div class="tech-tags" aria-hidden="true">
+              <span class="tag">Automation</span>
+              <span class="tag">AI</span>
+              <span class="tag">Python</span>
+            </div>
+            <p class="project-link"><a href="https://github.com/Wiper15/ai-genesis" target="_blank" rel="noopener">View on GitHub →</a></p>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="p-townplan">
+            <h3 id="p-townplan">TownPlanPay</h3>
+            <p>Digital payment solutions with milestone tracking and smart-contract integration.</p>
+            <div class="tech-tags" aria-hidden="true">
+              <span class="tag">Web3</span>
+              <span class="tag">Payments</span>
+              <span class="tag">Smart Contracts</span>
+            </div>
+            <p class="project-link"><a href="https://github.com/Wiper15/wipernation-townplanpay" target="_blank" rel="noopener">View on GitHub →</a></p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Netlify-ready contact form (no server required) -->
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title">Get In Touch</h2>
+        <p>Ready to work together? Let's build something amazing.</p>
+
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" action="/thanks.html">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="visually-hidden"><label>Don’t fill this out if you're human: <input name="bot-field"></label></p>
+
+          <label>
+            <span class="label-text">Your name</span>
+            <input type="text" name="name" required>
+          </label>
+
+          <label>
+            <span class="label-text">Email</span>
+            <input type="email" name="email" required>
+          </label>
+
+          <label>
+            <span class="label-text">Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+
+          <div class="contact-actions">
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <a class="btn btn-outline" href="mailto:ebonginiubong9@gmail.com">📧 Email Me</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="copyright">© 2024 Iniubong Ebong. Web3 Developer & Cybersecurity Specialist.</div>
+      <div class="social" role="navigation" aria-label="Social links">
+        <a href="https://github.com/Wiper15" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/iniubong-ebong-a82900362" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/share/14QuQgwgwoq/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://x.com/wipernation1" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://www.tiktok.com/@wipernation1" target="_blank" rel="noopener">TikTok</a>
+        <a href="mailto:ebonginiubong9@gmail.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>    .section-title{font-size:1.25rem;font-weight:700;margin-bottom:.75rem;text-align:center}
 
     .projects{
       display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;
