@@ -1,0 +1,30 @@
+:root{
+  --bg:#ffffff; --muted:#6b7280; --accent-1:#6d28d9; --accent-2:#8b5cf6;
+  --card:#f8fafc; --max-width:1100px; --radius:10px; --shadow:0 6px 18px rgba(16,24,40,0.06);
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--bg),#fbfdff);
+  color:#0f172a;
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.site{max-width:1100px;margin:0 auto;padding:1rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0}
+.brand{display:flex;gap:.75rem;align-items:center;text-decoration:none;color:inherit}
+.logo{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+nav a{margin-left:.75rem;color:var(--muted);text-decoration:none;font-weight:600}
+.hero{padding:2rem;border-radius:10px;background:linear-gradient(180deg,rgba(109,40,217,0.9),rgba(139,92,246,0.9));color:#fff;margin-top:.75rem;text-align:center}
+.section-title{font-weight:700;font-size:1.15rem;margin-bottom:.5rem}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem;margin-top:.75rem}
+.card{background:var(--card);padding:.75rem;border-radius:10px;box-shadow:var(--shadow)}
+.contact{padding:1rem;margin-top:1rem;background:#f8fafc;border-radius:10px}
+footer{margin-top:1.25rem;padding:1rem 0;text-align:center;color:var(--muted)}
+.btn{display:inline-block;padding:.45rem .75rem;border-radius:8px;text-decoration:none}
+.btn-primary{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:#fff;border:none}
+.btn-outline{border:1px solid rgba(107,33,168,0.12);color:var(--accent-1);background:transparent}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+@media (max-width:540px){.logo{width:40px;height:40px}}
