@@ -1,5 +1,9 @@
-"dependencies": {
-  "@netlify/functions": "^2.0.0",
-  "node-fetch": "^3.3.2",
-  "@google/generative-ai": "^0.1.0"
+{
+  "name": "wiper15-portfolio",
+  "version": "1.0.0",
+  "dependencies": {
+    "@netlify/functions": "^2.0.0",
+    "node-fetch": "^3.3.2",
+    "@google/generative-ai": "^0.1.0"
+  }
 }
