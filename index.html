@@ -133,39 +133,6 @@
         </div>
     </footer>
 
-    <script>
-        const chatForm = document.getElementById('ai-chat-form');
-        const chatDisplay = document.getElementById('chat-display');
-        const userInput = document.getElementById('user-input');
-
-        chatForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const message = userInput.value;
-            userInput.value = '';
-
-            // Display user message
-            const userMsgDiv = document.createElement('div');
-            userMsgDiv.className = 'chat chat-end mb-2 text-right';
-            userMsgDiv.innerHTML = `<div class="chat-bubble bg-blue-500 text-white inline-block p-3 rounded-lg">${message}</div>`;
-            chatDisplay.appendChild(userMsgDiv);
-
-            try {
-                const response = await fetch('/.netlify/functions/chat', {
-                    method: 'POST',
-                    body: JSON.stringify({ message })
-                });
-                const data = await response.json();
-                
-                // Display AI response
-                const aiMsgDiv = document.createElement('div');
-                aiMsgDiv.className = 'chat chat-start mb-2';
-                aiMsgDiv.innerHTML = `<div class="chat-bubble bg-gray-100 p-3 rounded-lg">${data.answer}</div>`;
-                chatDisplay.appendChild(aiMsgDiv);
-            } catch (err) {
-                console.error("Chat failed:", err);
-            }
-        });
-    </script>
-</body>
-                          </html>
-                          
+    <<div class="contact-actions">
+    <a href="mailto:your-email@example.com" class="btn btn-primary">Email Me Directly to Book</a>
+</div>
