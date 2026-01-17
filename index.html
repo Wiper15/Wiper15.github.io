@@ -4,126 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniubong Ebong — Web3 & AI Portfolio</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-brand: #6b5cff;
+        }
         /* Animation Styles for Scroll Reveal */
         section {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-            filter: blur(5px);
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+            filter: blur(10px);
         }
-
         section.show {
             opacity: 1;
             transform: translateY(0);
             filter: blur(0);
         }
-
-        /* Glassmorphism Card Style */
-       .card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease;
-        }
-        
-       .card:hover {
-            transform: scale(1.02);
-        }
-
-       .btn-primary {
-            background-color: #6b5cff;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            display: inline-block;
+        /* Modern Glassmorphism Effect */
+      .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
-    <header class="p-6">
-        <nav class="flex justify-between items-center max-w-5xl mx-auto">
-            <div class="font-bold text-xl">IE</div>
-            <div class="space-x-4">
-                <a href="#projects">Projects</a>
-                <a href="#contact">Book Me</a>
-                <a href="https://github.com/Wiper15">GitHub</a>
+<body class="bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
+    <header class="p-6 sticky top-0 z-50 glass-card">
+        <nav class="flex justify-between items-center max-w-6xl mx-auto">
+            <div class="font-bold text-2xl tracking-tighter text-brand">IE.</div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#projects" class="hover:text-brand transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-brand transition-colors">Book Me</a>
+                <a href="https://github.com/Wiper15" class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3.405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0.315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    GitHub
+                </a>
             </div>
         </nav>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6">
-        <section id="hero" class="py-20 text-center">
-            <h1 class="text-5xl font-bold mb-4">Iniubong Ebong</h1>
-            <p class="text-xl text-gray-600 mb-8">Building the future of digital payments and Web3 solutions.</p>
-            <div class="space-x-4">
-                <a href="#projects" class="btn-primary">View Projects</a>
-                <a href="mailto:your-email@example.com" class="border border-gray-300 p-3 rounded-lg">Email Me to Book</a>
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <section id="hero" class="min-h-[70vh] flex flex-col items-center justify-center text-center space-y-8">
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tight bg-gradient-to-r from-brand to-indigo-400 bg-clip-text text-transparent">Iniubong Ebong</h1>
+            <p class="text-xl md:text-2xl text-slate-500 max-w-2xl">Building the future of digital payments and Web3 solutions.</p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <a href="#projects" class="bg-brand text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-brand/20 hover:scale-105 transition-transform min-h-[44px]">View Projects</a>
+                <a href="mailto:your-email@example.com" class="bg-white px-8 py-4 rounded-full font-bold border border-slate-200 hover:bg-slate-50 transition-colors min-h-[44px]">Email Me to Book</a>
             </div>
         </section>
 
-        <section id="projects" class="py-20">
-            <h2 class="text-3xl font-bold mb-10 text-center">My Projects</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <article class="card p-6 rounded-2xl shadow-sm">
-                    <h3 class="font-bold text-xl mb-2">PayGuard AI</h3>
-                    <p class="text-gray-600 mb-4">AI agent that mints Solana NFTs as immutable proof of late payments.</p>
-                    <a href="#" class="text-blue-600 font-semibold">View on GitHub →</a>
+        <section id="projects" class="py-24 space-y-12">
+            <div class="space-y-4 text-center">
+                <h2 class="text-4xl font-bold">My Projects</h2>
+                <p class="text-slate-500">Selected work in Web3, AI, and Automation.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-full md:h-[600px]">
+                <article class="md:col-span-2 md:row-span-2 glass-card p-8 rounded-3xl shadow-sm hover:shadow-xl transition-shadow flex flex-col justify-end group">
+                    <div class="mb-4 text-brand font-bold uppercase tracking-widest text-xs">Featured Project</div>
+                    <h3 class="text-3xl font-bold mb-4">PayGuard AI</h3>
+                    <p class="text-slate-600 mb-6">AI agent that mints Solana NFTs as immutable proof of late payments. Bridging legal enforcement and blockchain.</p>
+                    <a href="#" class="font-bold text-brand group-hover:translate-x-2 transition-transform">View on GitHub →</a>
                 </article>
-                <article class="card p-6 rounded-2xl shadow-sm">
-                    <h3 class="font-bold text-xl mb-2">AI Genesis</h3>
-                    <p class="text-gray-600 mb-4">Automation workflows with advanced AI capabilities for ops testing.</p>
-                    <a href="#" class="text-blue-600 font-semibold">View on GitHub →</a>
+                <article class="md:col-span-2 glass-card p-8 rounded-3xl shadow-sm hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold mb-2">AI Genesis</h3>
+                    <p class="text-slate-600 text-sm">Automated testing workflows with deep-learning AI integration.</p>
                 </article>
-                <article class="card p-6 rounded-2xl shadow-sm">
-                    <h3 class="font-bold text-xl mb-2">TownPlanPay</h3>
-                    <p class="text-gray-600 mb-4">Web3 payment solutions with milestone tracking and smart contracts.</p>
-                    <a href="#" class="text-blue-600 font-semibold">View on GitHub →</a>
+                <article class="md:col-span-2 glass-card p-8 rounded-3xl shadow-sm hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold mb-2">TownPlanPay</h3>
+                    <p class="text-slate-600 text-sm">Web3 milestone tracking for real estate and construction smart contracts.</p>
                 </article>
             </div>
         </section>
 
-        <section id="chat" class="py-20 bg-white rounded-3xl p-10 shadow-lg mb-20 text-center">
-            <h2 class="text-3xl font-bold mb-4">Chat with me (AI)</h2>
-            <p class="text-gray-500 mb-6 italic">Note: The AI engine is currently on a 1-month maintenance break. Check back soon!</p>
-            <div class="bg-gray-100 h-40 rounded-xl flex items-center justify-center border-2 border-dashed border-gray-300">
-                <p class="text-gray-400">Offline</p>
+        <section id="chat" class="py-24 bg-brand rounded-[3rem] p-12 text-white overflow-hidden relative">
+            <div class="relative z-10 space-y-6 text-center">
+                <h2 class="text-4xl font-bold">Chat with me (AI)</h2>
+                <p class="text-indigo-100 opacity-80 italic">Note: The AI engine is currently on a 1-month maintenance break.</p>
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl">
+                    <span class="px-3 py-1 bg-white/20 rounded-full text-xs font-bold uppercase tracking-widest">Status: Offline</span>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="py-20 text-center">
-            <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
-            <p class="text-lg text-gray-600 mb-8">Ready to work together? Let's build something amazing.</p>
-            <div class="bg-white p-8 rounded-2xl shadow-sm inline-block w-full max-w-md">
-                <a href="mailto:your-email@example.com" class="btn-primary w-full py-4 text-lg">Email Me Directly to Book</a>
-                <p class="mt-4 text-sm text-gray-400">Response time: Usually within 24 hours.</p>
+        <section id="contact" class="py-24 text-center space-y-12">
+            <div class="space-y-4">
+                <h2 class="text-4xl font-bold">Get In Touch</h2>
+                <p class="text-slate-500">Ready to build something amazing? I'm available for new contracts.</p>
+            </div>
+            <div class="bg-white p-12 rounded-[3rem] shadow-2xl shadow-slate-200 border border-slate-100 inline-block w-full max-w-lg space-y-8">
+                <a href="mailto:your-email@example.com" class="bg-brand text-white w-full block py-5 rounded-2xl text-xl font-bold hover:brightness-110 transition-all shadow-lg shadow-brand/30 min-h-[44px]">Email Me Directly to Book</a>
+                <div class="flex items-center justify-center gap-2 text-slate-400 text-sm">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    Response time: Usually within 24 hours
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-10 text-center border-t border-gray-200 mt-20">
-        <p class="text-gray-500 text-sm">&copy; 2026 Iniubong Ebong. All Rights Reserved.</p>
-        <div class="mt-4 space-x-4">
-            <a href="#" class="text-gray-400 hover:text-gray-900">LinkedIn</a>
-            <a href="#" class="text-gray-400 hover:text-gray-900">Twitter</a>
-        </div>
+    <footer class="py-12 text-center text-slate-400 border-t border-slate-100">
+        <p class="text-sm font-medium">&copy; 2026 Iniubong Ebong. All Rights Reserved.</p>
     </footer>
 
     <script>
-        // Scroll Reveal Observer Logic
+        /* Scroll Reveal Observer Logic */
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add('show');
             }
           });
-        });
+        }, { threshold: 0.15 });
 
         const hiddenElements = document.querySelectorAll('section');
         hiddenElements.forEach((el) => observer.observe(el));
     </script>
 </body>
-</html>
+            </html>
+            
