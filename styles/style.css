@@ -520,3 +520,21 @@ body {
   transform: translateY(-10px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
+/* Fix Safari Grid/Flex height issues */
+.reveal {
+    display: block; /* Ensure the grid items aren't trying to be flex and grid at once */
+    min-height: 1fr;
+}
+
+/* Force standard height for Bento cards */
+.grid {
+    display: grid !important;
+    grid-auto-rows: 1fr; /* Forces all cards in a row to match the tallest one */
+}
+
+/* Fallback for older Safari versions that don't support modern gradients */
+@supports not (color: color-mix(in srgb, red, blue)) {
+    .bg-gradient-to-r {
+        background-color: #2563eb; /* Solid blue fallback */
+    }
+}
