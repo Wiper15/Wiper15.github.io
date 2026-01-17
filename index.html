@@ -3,136 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniubong Ebong — Web3 Developer & Cybersecurity Specialist</title>
-    <meta property="og:title" content="Iniubong Ebong Portfolio">
-    <meta property="og:description" content="Web3 Developer & Cybersecurity Specialist building digital payment solutions.">
+    <title>Iniubong Ebong — Web3 & AI Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Animation Styles for Scroll Reveal */
+        section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+            filter: blur(5px);
+        }
+
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        /* Glassmorphism Card Style */
+       .card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+       .card:hover {
+            transform: scale(1.02);
+        }
+
+       .btn-primary {
+            background-color: #6b5cff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
 </head>
-<body class="bg-white text-gray-900">
-    <header class="site-header">
-        <nav class="nav-container">
-            <a href="#" class="brand">
-                <div class="logo">IE</div>
-                <span class="name">Iniubong Ebong</span>
-            </a>
-            <div class="nav-links">
+<body class="bg-gray-50 font-sans">
+    <header class="p-6">
+        <nav class="flex justify-between items-center max-w-5xl mx-auto">
+            <div class="font-bold text-xl">IE</div>
+            <div class="space-x-4">
                 <a href="#projects">Projects</a>
-                <a href="#chat">AI Chat</a>
-                <a href="#contact">Contact</a>
-                <a href="https://github.com/Wiper15" class="github-link">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="20">
-                    GitHub
-                </a>
+                <a href="#contact">Book Me</a>
+                <a href="https://github.com/Wiper15">GitHub</a>
             </div>
         </nav>
     </header>
 
-    <main class="site-main">
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h1>Iniubong Ebong</h1>
-                <p class="tagline">Building the future of digital payments and Web3 solutions. Currently developing PayGuard AI and exploring cybersecurity.</p>
-                <div class="stats">
-                    <div class="stat-item"><strong>3+</strong> Active Projects</div>
-                    <div class="stat-item"><strong>Web3</strong> Specialization</div>
-                    <div class="stat-item"><strong>AI</strong> Integration</div>
-                </div>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">View My Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
-                </div>
+    <main class="max-w-5xl mx-auto px-6">
+        <section id="hero" class="py-20 text-center">
+            <h1 class="text-5xl font-bold mb-4">Iniubong Ebong</h1>
+            <p class="text-xl text-gray-600 mb-8">Building the future of digital payments and Web3 solutions.</p>
+            <div class="space-x-4">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="mailto:your-email@example.com" class="border border-gray-300 p-3 rounded-lg">Email Me to Book</a>
             </div>
         </section>
 
-        <section id="projects" class="projects-section">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <article class="card">
-                    <h3>PayGuard AI</h3>
-                    <p>AI agent that mints Solana NFTs as immutable proof when salary is late.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Solana</span>
-                        <span class="tag">AI</span>
-                    </div>
-                    <a href="#" class="project-link">View on GitHub →</a>
+        <section id="projects" class="py-20">
+            <h2 class="text-3xl font-bold mb-10 text-center">My Projects</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <article class="card p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-bold text-xl mb-2">PayGuard AI</h3>
+                    <p class="text-gray-600 mb-4">AI agent that mints Solana NFTs as immutable proof of late payments.</p>
+                    <a href="#" class="text-blue-600 font-semibold">View on GitHub →</a>
                 </article>
-
-                <article class="card">
-                    <h3>AI Genesis Automation</h3>
-                    <p>Automation workflows with advanced AI capabilities for operations and testing.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Automation</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">Python</span>
-                    </div>
-                    <a href="#" class="project-link">View on GitHub →</a>
+                <article class="card p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-bold text-xl mb-2">AI Genesis</h3>
+                    <p class="text-gray-600 mb-4">Automation workflows with advanced AI capabilities for ops testing.</p>
+                    <a href="#" class="text-blue-600 font-semibold">View on GitHub →</a>
                 </article>
-
-                <article class="card">
-                    <h3>TownPlanPay</h3>
-                    <p>Digital payment solutions with milestone tracking and smart-contract integration.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Web3</span>
-                        <span class="tag">Payments</span>
-                        <span class="tag">Smart Contracts</span>
-                    </div>
-                    <a href="#" class="project-link">View on GitHub →</a>
+                <article class="card p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-bold text-xl mb-2">TownPlanPay</h3>
+                    <p class="text-gray-600 mb-4">Web3 payment solutions with milestone tracking and smart contracts.</p>
+                    <a href="#" class="text-blue-600 font-semibold">View on GitHub →</a>
                 </article>
             </div>
         </section>
 
-        <section id="chat" class="chat-section">
-            <h2 class="section-title">Chat with me (AI)</h2>
-            <p class="section-subtitle">Ask about my projects, articles, design work, or general Web3 & AI topics.</p>
-            <div class="chat-container">
-                <div id="chat-display" class="chat-window">
-                    <div class="chat chat-start">
-                        <div class="chat-bubble bg-gray-100 p-3 rounded-lg">Hello! I'm Iniubong's AI assistant. How can I help you today?</div>
-                    </div>
-                </div>
-                <form id="ai-chat-form" class="chat-input-area">
-                    <input type="text" id="user-input" placeholder="Ask me anything..." required>
-                    <button type="submit" class="btn-send">Send</button>
-                </form>
-                <p class="disclaimer">Note: This chat uses a serverless proxy on Netlify so keys remain secret. [1]</p>
+        <section id="chat" class="py-20 bg-white rounded-3xl p-10 shadow-lg mb-20 text-center">
+            <h2 class="text-3xl font-bold mb-4">Chat with me (AI)</h2>
+            <p class="text-gray-500 mb-6 italic">Note: The AI engine is currently on a 1-month maintenance break. Check back soon!</p>
+            <div class="bg-gray-100 h-40 rounded-xl flex items-center justify-center border-2 border-dashed border-gray-300">
+                <p class="text-gray-400">Offline</p>
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Ready to work together? Let's build something amazing.</p>
-            <form name="contact" method="POST" data-netlify="true" action="/thanks" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Your name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send message</button>
-            </form>
+        <section id="contact" class="py-20 text-center">
+            <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+            <p class="text-lg text-gray-600 mb-8">Ready to work together? Let's build something amazing.</p>
+            <div class="bg-white p-8 rounded-2xl shadow-sm inline-block w-full max-w-md">
+                <a href="mailto:your-email@example.com" class="btn-primary w-full py-4 text-lg">Email Me Directly to Book</a>
+                <p class="mt-4 text-sm text-gray-400">Response time: Usually within 24 hours.</p>
+            </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <p>&copy; 2026 Iniubong Ebong. Web3 Developer & Cybersecurity Specialist.</p>
-        <div class="social-links">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
-            <a href="#">Email</a>
+    <footer class="py-10 text-center border-t border-gray-200 mt-20">
+        <p class="text-gray-500 text-sm">&copy; 2026 Iniubong Ebong. All Rights Reserved.</p>
+        <div class="mt-4 space-x-4">
+            <a href="#" class="text-gray-400 hover:text-gray-900">LinkedIn</a>
+            <a href="#" class="text-gray-400 hover:text-gray-900">Twitter</a>
         </div>
     </footer>
 
-    <<div class="contact-actions">
-    <a href="mailto:your-email@example.com" class="btn btn-primary">Email Me Directly to Book</a>
-</div>
+    <script>
+        // Scroll Reveal Observer Logic
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+            }
+          });
+        });
+
+        const hiddenElements = document.querySelectorAll('section');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
