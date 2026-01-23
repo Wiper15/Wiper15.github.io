@@ -1,99 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Iniubong Ebong | Portfolio</title>
-    <meta name="title" content="Iniubong Ebong | Portfolio">
-    <meta name="description" content="Modern Bento Grid portfolio featuring PayGuard AI and other innovative projects. Available for booking now.">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wiper15.github.io/">
-    <meta property="og:title" content="Iniubong Ebong | Portfolio">
-    <meta property="og:description" content="Modern Bento Grid portfolio featuring PayGuard AI and other innovative projects.">
-    <meta property="og:image" content="https://wiper15.github.io/og-image.jpg">
-
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
-    <style>
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    <title>Iniubong Ebong | AI & Web3 Engineer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @theme {
+            --color-brand: #6366f1; /* Indigo-500 */
+            --color-accent: #818cf8; /* Indigo-400 */
+            --font-display: "Inter", sans-serif;
+            --font-mono: "JetBrains Mono", monospace;
         }
-        .reveal.active {
+
+        /* 2026 Scroll Storytelling Reveal Animation */
+        section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+            filter: blur(8px);
+        }
+        section.show {
             opacity: 1;
             transform: translateY(0);
+            filter: blur(0);
         }
+
+        /* Futuristic Glassmorphism */
+       .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+       .chat-container::-webkit-scrollbar { width: 4px; }
+       .chat-container::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.5); border-radius: 10px; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+<body class="bg-slate-950 text-slate-200 font-display selection:bg-brand selection:text-white">
+    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-900/20 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-900/20 blur-[120px] rounded-full"></div>
+    </div>
 
-    <header class="max-w-3xl mx-auto px-6 py-16 text-center">
-        <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mb-4">
-            Iniubong Ebong
-        </h1>
-        <p class="text-xl text-slate-600 font-medium">Full-Stack Developer & AI Specialist</p>
+    <header class="p-6 sticky top-0 z-50 glass-card border-b-white/5">
+        <nav class="flex justify-between items-center max-w-6xl mx-auto">
+            <div class="font-extrabold text-2xl tracking-tighter text-indigo-400">IE.</div>
+            <div class="flex items-center gap-8 font-semibold text-sm uppercase tracking-widest text-slate-400">
+                <a href="#projects" class="hover:text-brand transition-colors">Experience</a>
+                <a href="#chat" class="hover:text-brand transition-colors">AI Assistant</a>
+                <a href="mailto:your-email@example.com" class="bg-brand text-white px-4 py-2 rounded-lg shadow-lg shadow-indigo-500/20">Book Me</a>
+            </div>
+        </nav>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 pb-24">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <main class="max-w-6xl mx-auto px-6 py-12 space-y-24">
+        <section id="hero" class="min-h-[60vh] flex flex-col items-center justify-center text-center space-y-6">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold tracking-tighter uppercase">Available for Q1 2026 Contracts</span>
+            <h1 class="text-6xl md:text-8xl font-extrabold leading-none tracking-tight text-white">
+                Engineering <span class="text-brand">Intelligence</span>.
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl font-medium">
+                Web3 Architect & AI Specialist. Building the next generation of automated payment infrastructures and decentralized protocols.
+            </p>
+        </section>
+
+        <section id="projects" class="space-y-12">
+            <div class="flex justify-between items-end">
+                <h2 class="text-3xl font-bold text-white tracking-tight">Technical Case Studies</h2>
+                <a href="https://github.com/Wiper15" class="text-indigo-400 font-semibold text-sm hover:underline flex items-center gap-2">View Source Repository →</a>
+            </div>
             
-            <div class="reveal md:col-span-2 bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
-                <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Featured Project</span>
-                <h2 class="text-3xl font-bold mt-2">PayGuard AI</h2>
-                <p class="mt-4 text-slate-600 leading-relaxed">An intelligent fraud detection system utilizing machine learning to secure transactions in real-time.</p>
-                <div class="mt-6 flex gap-2">
-                    <span class="px-3 py-1 bg-slate-100 rounded-full text-sm font-medium">Python</span>
-                    <span class="px-3 py-1 bg-slate-100 rounded-full text-sm font-medium">TensorFlow</span>
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4">
+                <article class="md:col-span-2 md:row-span-2 glass-card p-8 rounded-3xl hover:border-brand/40 transition-all group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <svg class="w-32 h-32 text-brand" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+                    </div>
+                    <div class="relative z-10 space-y-4">
+                        <span class="text-brand font-bold text-xs uppercase tracking-widest">Web3 Infrastructure</span>
+                        <h3 class="text-4xl font-extrabold text-white leading-tight">PayGuard AI</h3>
+                        <p class="text-slate-400 text-lg">Autonomous agent minting Solana NFTs as legal proof of late payment. Bridging Web3 with real-world legal compliance.</p>
+                        <div class="flex gap-2 font-mono text-[10px]">
+                            <span class="px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">Solana</span>
+                            <span class="px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">Rust</span>
+                            <span class="px-2 py-1 bg-white/5 rounded border border-white/10 uppercase">LLM</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="md:col-span-2 glass-card p-6 rounded-3xl space-y-3">
+                    <h3 class="text-xl font-bold text-white">AI Genesis Automation</h3>
+                    <p class="text-slate-400 text-sm">Large-scale automated testing suites powered by Gemini 2.5 Pro reasoning models.</p>
+                </article>
+
+                <article class="md:col-span-2 glass-card p-6 rounded-3xl space-y-3">
+                    <h3 class="text-xl font-bold text-white">TownPlanPay</h3>
+                    <p class="text-slate-400 text-sm">Real estate milestone tracking through decentralized smart-contracts for transparency.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="chat" class="py-12">
+            <div class="glass-card rounded-[2.5rem] overflow-hidden grid md:grid-cols-2">
+                <div class="p-12 space-y-6 bg-gradient-to-br from-brand/20 to-transparent">
+                    <h2 class="text-4xl font-extrabold text-white">Talk to my Resume</h2>
+                    <p class="text-slate-400 leading-relaxed">
+                        I've trained an agent on my codebase, project history, and technical philosophy. Ask "Iniubong's Assistant" anything about my work.
+                    </p>
+                    <div class="space-y-4 font-semibold text-sm">
+                        <div class="flex items-center gap-3 text-indigo-300">
+                            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                            Direct API connection to Gemini 2.5 Pro
+                        </div>
+                        <div class="flex items-center gap-3 text-indigo-300">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            Edge-optimized serverless responses
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-900/50 flex flex-col h-[400px]">
+                    <div id="chat-window" class="flex-1 p-6 overflow-y-auto space-y-4 chat-container">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-brand flex-shrink-0 flex items-center justify-center text-[10px] font-bold">AI</div>
+                            <div class="bg-slate-800 p-4 rounded-2xl rounded-tl-none text-sm leading-relaxed max-w-[80%] text-slate-300 shadow-sm">
+                                Hello! I'm Iniubong's virtual concierge. What would you like to know about my projects or engineering experience?
+                            </div>
+                        </div>
+                    </div>
+                    <form id="chat-form" class="p-4 border-t border-white/5 flex gap-2">
+                        <input type="text" id="user-input" placeholder="Type a question..." class="flex-1 bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand transition-all" required>
+                        <button type="submit" class="bg-brand hover:brightness-110 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all">Send</button>
+                    </form>
                 </div>
             </div>
+        </section>
 
-            <div class="reveal bg-indigo-600 p-8 rounded-3xl shadow-lg text-white flex flex-col justify-between">
-                <div>
-                    <h2 class="text-2xl font-bold">Work with me</h2>
-                    <p class="mt-2 text-indigo-100 text-sm">Currently accepting new projects and consultations.</p>
-                </div>
-                <a href="mailto:your-email@example.com" class="mt-8 block w-full py-3 bg-white text-indigo-600 font-bold rounded-xl text-center hover:bg-indigo-50 transition-colors">
-                    Email Me Directly
+        <section id="contact" class="py-12 text-center space-y-8">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white">Let's build the <span class="text-brand italic">future</span>.</h2>
+            <div class="max-w-md mx-auto glass-card p-10 rounded-[3rem] shadow-2xl shadow-indigo-500/10">
+                <a href="mailto:your-email@example.com" class="block w-full bg-brand text-white py-4 rounded-2xl font-bold text-lg shadow-lg shadow-indigo-500/30 hover:-translate-y-1 transition-transform">
+                    Email Me Directly to Book
                 </a>
+                <p class="mt-4 text-xs text-slate-500 uppercase tracking-widest font-bold">Responds within 24 hours</p>
             </div>
-
-            <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
-                <h3 class="text-xl font-bold">Project Alpha</h3>
-                <p class="mt-2 text-slate-600 text-sm">Automated cloud infrastructure deployment script.</p>
-            </div>
-
-            <div class="reveal bg-slate-900 p-8 rounded-3xl shadow-sm text-white md:col-span-2 flex items-center justify-between">
-                <div>
-                    <h3 class="text-xl font-bold">AI Assistant</h3>
-                    <p class="text-slate-400 text-sm">Our AI concierge is currently refreshing (Offline).</p>
-                </div>
-                <div class="flex items-center gap-2">
-                    <span class="w-3 h-3 bg-amber-500 rounded-full animate-pulse"></span>
-                    <span class="text-xs font-mono text-slate-400 uppercase tracking-widest">Credit Reset Pending</span>
-                </div>
-            </div>
-
-        </div>
+        </section>
     </main>
 
-    <footer class="text-center pb-12 text-slate-400 text-sm">
-        <p>© 2026 Iniubong Ebong. All Rights Reserved.</p>
+    <footer class="py-12 text-center border-t border-white/5 text-slate-600 text-[10px] uppercase tracking-widest font-bold">
+        &copy; 2026 Iniubong Ebong. All Systems Operational. 
     </footer>
 
     <script>
+        // 1. Scroll Storytelling Reveal Script
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
+                    entry.target.classList.add('show');
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.15 });
 
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+        document.querySelectorAll('section').forEach((el) => observer.observe(el));
+
+        // 2. AI Chat Logic (Calls Backend Netlify Function)
+        const chatForm = document.getElementById('chat-form');
+        const chatWindow = document.getElementById('chat-window');
+        const userInput = document.getElementById('user-input');
+
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const message = userInput.value;
+            userInput.value = '';
+
+            // Render User Bubble
+            const userMsg = `<div class="flex items-start gap-3 justify-end"><div class="bg-indigo-600 p-4 rounded-2xl rounded-tr-none text-sm max-w-[80%] text-white shadow-lg">${message}</div></div>`;
+            chatWindow.insertAdjacentHTML('beforeend', userMsg);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+
+            try {
+                const response = await fetch('/.netlify/functions/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message })
+                });
+                
+                const data = await response.json();
+                
+                // Render AI Response
+                const aiMsg = `<div class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-brand flex-shrink-0 flex items-center justify-center text-[10px] font-bold">AI</div><div class="bg-slate-800 p-4 rounded-2xl rounded-tl-none text-sm leading-relaxed max-w-[80%] text-slate-300 shadow-sm">${data.answer}</div></div>`;
+                chatWindow.insertAdjacentHTML('beforeend', aiMsg);
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+            } catch (err) {
+                console.error("Chat engine offline:", err);
+            }
+        });
     </script>
 </body>
-</html>
-
+    </html>
+    
