@@ -8,11 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
         @theme {
-            --color-brand: #6366f1; /* Futuristic Indigo */
+            --color-brand: #6366f1;
             --color-surface: #0f172a;
         }
-
-        /* 2026 Scroll-Reveal Logic */
         section {
             opacity: 0;
             transform: translateY(30px);
@@ -24,9 +22,7 @@
             transform: translateY(0);
             filter: blur(0);
         }
-
-        /* Responsive Bento Grid Constraints */
-       .glass-card {
+      .glass-card {
             background: rgba(15, 23, 42, 0.6);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -57,14 +53,14 @@
                 Engineering <span class="text-brand">Intelligence</span>.
             </h1>
             <p class="text-base md:text-xl text-slate-400 max-w-2xl font-medium break-words">
-                Full-Stack Developer & AI Specialist. Architecting the next generation of automated payment infrastructures and decentralized protocols.
+                Full-Stack Developer & AI Specialist. Architecting decentralized fiscal gateways and agentic autonomous systems.
             </p>
         </section>
 
         <section id="projects" class="space-y-12">
             <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight text-center md:text-left">Technical Case Studies</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[650px]">
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[700px]">
                 <article class="md:col-span-1 md:row-span-2 glass-card p-6 rounded-3xl flex flex-col items-center text-center justify-center space-y-4">
                     <div class="w-32 h-32 rounded-full border-4 border-brand/20 overflow-hidden shadow-2xl shadow-brand/10">
                         <img src="assets/images/profile.jpg" alt="Iniubong Ebong" class="w-full h-full object-cover">
@@ -80,7 +76,7 @@
                          <img src="assets/images/payguard-flyer.png" alt="Flyer" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-8 space-y-4">
-                        <span class="text-brand font-bold text-xs uppercase tracking-widest">Featured Deployment</span>
+                        <span class="text-brand font-bold text-xs uppercase tracking-widest">Core Infrastructure</span>
                         <h3 class="text-2xl md:text-3xl font-extrabold text-white leading-tight">PayGuard AI</h3>
                         <p class="text-slate-400 text-sm md:text-base leading-relaxed">
                             An AI agent that automatically mints a "Proof of Debt" NFT on the Solana blockchain when a salary payment is late.
@@ -89,14 +85,16 @@
                     </div>
                 </article>
 
-                <article class="md:col-span-1 glass-card p-6 rounded-3xl flex flex-col justify-center space-y-2 border-white/5">
-                    <h3 class="text-lg font-bold text-white leading-snug">Municipal Logic</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">AI-powered USDC disbursements for municipal projects.</p>
+                <article class="md:col-span-1 glass-card p-6 rounded-3xl flex flex-col justify-center space-y-2 border-brand/10 bg-gradient-to-b from-slate-900 to-slate-950">
+                    <span class="text-brand font-bold text-[10px] uppercase tracking-widest">Web3 Fiscal Logic</span>
+                    <h3 class="text-lg font-bold text-white leading-snug">TownPlanPay</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">A decentralized protocol utilizing AI to orchestrate USDC disbursements for municipal infrastructure, ensuring verifiable, milestone-based financial transparency.</p>
                 </article>
 
-                <article class="md:col-span-1 glass-card p-6 rounded-3xl flex flex-col justify-center space-y-2 border-white/5">
+                <article class="md:col-span-1 glass-card p-6 rounded-3xl flex flex-col justify-center space-y-2 border-brand/10 bg-gradient-to-b from-slate-900 to-slate-950">
+                    <span class="text-brand font-bold text-[10px] uppercase tracking-widest">Autonomous Support</span>
                     <h3 class="text-lg font-bold text-white leading-snug">Service AI</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Intelligent Customer Support Automation System.</p>
+                    <p class="text-slate-400 text-xs leading-relaxed">An enterprise-grade support orchestration engine employing sentiment-aware AI agents to automate complex customer interactions and deliver predictive issue resolution.</p>
                 </article>
             </div>
         </section>
@@ -131,7 +129,7 @@
         </section>
 
         <section id="contact" class="py-12 text-center space-y-12 pb-24">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-white">Work with me</h2>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tighter">Ready to build the future?</h2>
             <div class="bg-brand p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-indigo-500/20 inline-block w-full max-w-md space-y-6">
                 <p class="text-white font-medium">Currently accepting new projects and consultations for Q1 2026.</p>
                 <a href="mailto:your-email@example.com" class="block bg-white text-brand py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform min-h-[44px]">
@@ -146,7 +144,6 @@
     </footer>
 
     <script>
-        /* Part 1: Intersection Observer (Reveal on Scroll) */
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -154,38 +151,8 @@
                 }
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('section').forEach((el) => observer.observe(el));
-
-        /* Part 2: AI Chat Proxy (Calls Google Cloud Run /api/chat) */
-        const chatForm = document.getElementById('chat-form');
-        const chatWindow = document.getElementById('chat-window');
-        const userInput = document.getElementById('user-input');
-
-        chatForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const message = userInput.value;
-            userInput.value = '';
-
-            const userMsg = `<div class="flex items-start gap-3 justify-end"><div class="bg-indigo-600 p-4 rounded-2xl rounded-tr-none text-white shadow-lg text-sm">${message}</div></div>`;
-            chatWindow.insertAdjacentHTML('beforeend', userMsg);
-            chatWindow.scrollTop = chatWindow.scrollHeight;
-
-            try {
-                const response = await fetch('/api/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message })
-                });
-                const data = await response.json();
-                const aiMsg = `<div class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-brand flex-shrink-0 flex items-center justify-center text-[10px] font-bold">AI</div><div class="bg-slate-800 p-4 rounded-2xl rounded-tl-none text-slate-300 text-sm">${data.answer}</div></div>`;
-                chatWindow.insertAdjacentHTML('beforeend', aiMsg);
-                chatWindow.scrollTop = chatWindow.scrollHeight;
-            } catch (err) {
-                console.error("AI Assistant Offline");
-            }
-        });
     </script>
 </body>
-    </html>
-    
+                        </html>
+                        
