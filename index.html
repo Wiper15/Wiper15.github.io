@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniubong Ebong | AI & Web3 Engineer</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
         @theme {
-            --color-brand: #6366f1;
-            --color-accent: #818cf8;
-            --font-display: "Inter", sans-serif;
+            --color-brand: #6366f1; /* Futuristic Indigo */
+            --color-surface: #0f172a;
         }
 
-        /* 2026 Reveal Animation */
+        /* 2026 Scroll-Reveal Logic */
         section {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+            transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
             filter: blur(8px);
         }
         section.show {
@@ -26,18 +25,18 @@
             filter: blur(0);
         }
 
-        /* Responsive Bento Cards */
-      .glass-card {
+        /* Responsive Bento Grid Constraints */
+       .glass-card {
             background: rgba(15, 23, 42, 0.6);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-200 font-display selection:bg-brand selection:text-white overflow-x-hidden">
-    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
-        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-900/20 blur-[120px] rounded-full"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-900/20 blur-[120px] rounded-full"></div>
+<body class="bg-slate-950 text-slate-200 font-sans overflow-x-hidden selection:bg-brand">
+    <div class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-900/20 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-900/10 blur-[120px] rounded-full"></div>
     </div>
 
     <header class="p-4 md:p-6 sticky top-0 z-50 glass-card border-b-white/5">
@@ -45,7 +44,7 @@
             <div class="font-extrabold text-xl md:text-2xl tracking-tighter text-indigo-400">IE.</div>
             <div class="flex items-center gap-4 md:gap-8 font-semibold text-[10px] md:text-sm uppercase tracking-widest text-slate-400">
                 <a href="#projects" class="hover:text-brand transition-colors">Experience</a>
-                <a href="#chat" class="hover:text-brand transition-colors">AI</a>
+                <a href="#chat" class="hover:text-brand transition-colors">AI Assistant</a>
                 <a href="mailto:your-email@example.com" class="bg-brand text-white px-3 py-1.5 md:px-4 md:py-2 rounded-lg shadow-lg shadow-indigo-500/20">Book Me</a>
             </div>
         </nav>
@@ -53,72 +52,101 @@
 
     <main class="max-w-6xl mx-auto px-6 py-12 space-y-24">
         <section id="hero" class="min-h-[50vh] flex flex-col items-center justify-center text-center space-y-6">
-            <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-bold tracking-tighter uppercase">Available for Q1 2026 Contracts</span>
-            <h1 class="text-4xl md:text-8xl font-extrabold leading-tight md:leading-none tracking-tight text-white text-balance">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-bold tracking-widest uppercase">Available for Q1 2026 Contracts</span>
+            <h1 class="text-4xl md:text-8xl font-extrabold leading-tight tracking-tight text-white text-balance">
                 Engineering <span class="text-brand">Intelligence</span>.
             </h1>
             <p class="text-base md:text-xl text-slate-400 max-w-2xl font-medium break-words">
-                Web3 Architect & AI Specialist. Building the next generation of automated payment infrastructures.
+                Full-Stack Developer & AI Specialist. Architecting the next generation of automated payment infrastructures and decentralized protocols.
             </p>
         </section>
 
         <section id="projects" class="space-y-12">
-            <div class="flex justify-between items-end">
-                <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Technical Case Studies</h2>
-            </div>
+            <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight text-center md:text-left">Technical Case Studies</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
-                <article class="md:col-span-2 md:row-span-2 glass-card p-8 rounded-3xl hover:border-brand/40 transition-all group relative overflow-hidden">
-                    <div class="relative z-10 space-y-4">
-                        <span class="text-brand font-bold text-xs uppercase tracking-widest">Web3 Infrastructure</span>
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">PayGuard AI</h3>
-                        <p class="text-slate-400 text-base md:text-lg">Autonomous agent minting Solana NFTs as legal proof of late payment.</p>
-                        <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-                            <span class="px-2 py-1 bg-white/5 rounded border border-white/10">SOLANA</span>
-                            <span class="px-2 py-1 bg-white/5 rounded border border-white/10">TENSORFLOW</span>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[650px]">
+                <article class="md:col-span-1 md:row-span-2 glass-card p-6 rounded-3xl flex flex-col items-center text-center justify-center space-y-4">
+                    <div class="w-32 h-32 rounded-full border-4 border-brand/20 overflow-hidden shadow-2xl shadow-brand/10">
+                        <img src="assets/images/profile.jpg" alt="Iniubong Ebong" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Iniubong Ebong</h3>
+                        <p class="text-slate-400 text-xs uppercase tracking-widest font-semibold">AI & Web3 Engineer</p>
                     </div>
                 </article>
 
-                <article class="md:col-span-2 glass-card p-6 rounded-3xl space-y-3 flex flex-col justify-center">
-                    <h3 class="text-lg font-bold text-white">AI Genesis Automation</h3>
-                    <p class="text-slate-400 text-xs">Automated cloud infrastructure deployment script.</p>
+                <article class="md:col-span-2 md:row-span-2 glass-card rounded-3xl overflow-hidden group border-brand/20">
+                    <div class="h-48 md:h-64 overflow-hidden bg-slate-900">
+                         <img src="assets/images/payguard-flyer.png" alt="Flyer" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 space-y-4">
+                        <span class="text-brand font-bold text-xs uppercase tracking-widest">Featured Deployment</span>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-white leading-tight">PayGuard AI</h3>
+                        <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                            An AI agent that automatically mints a "Proof of Debt" NFT on the Solana blockchain when a salary payment is late.
+                        </p>
+                        <a href="https://github.com/Wiper15" class="inline-block text-brand font-bold text-sm">View Source →</a>
+                    </div>
                 </article>
 
-                <article class="md:col-span-2 glass-card p-6 rounded-3xl space-y-3 flex flex-col justify-center">
-                    <h3 class="text-lg font-bold text-white">TownPlanPay</h3>
-                    <p class="text-slate-400 text-xs">Web3 milestone tracking for smart contracts.</p>
+                <article class="md:col-span-1 glass-card p-6 rounded-3xl flex flex-col justify-center space-y-2 border-white/5">
+                    <h3 class="text-lg font-bold text-white leading-snug">Municipal Logic</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">AI-powered USDC disbursements for municipal projects.</p>
+                </article>
+
+                <article class="md:col-span-1 glass-card p-6 rounded-3xl flex flex-col justify-center space-y-2 border-white/5">
+                    <h3 class="text-lg font-bold text-white leading-snug">Service AI</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Intelligent Customer Support Automation System.</p>
                 </article>
             </div>
         </section>
 
         <section id="chat" class="py-12">
-            <div class="bg-slate-900 rounded-[2rem] p-8 md:p-12 text-center space-y-6 border border-white/5 shadow-2xl">
-                <h2 class="text-3xl font-bold text-white">AI Assistant</h2>
-                <p class="text-slate-400 italic text-sm">Our AI concierge is currently refreshing (Offline).</p>
-                <div class="flex items-center justify-center gap-3 text-brand text-[10px] font-bold tracking-widest uppercase">
-                    <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
-                    Credit Reset Pending
+            <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 md:grid-cols-2 shadow-2xl">
+                <div class="p-8 md:p-12 space-y-6 bg-gradient-to-br from-brand/10 to-transparent">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Talk to my Resume</h2>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                        I've trained an agent on my project history and technical philosophy. Ask "Iniubong's Assistant" anything about my work.
+                    </p>
+                    <div class="flex items-center gap-3 text-brand text-[10px] font-bold tracking-widest uppercase bg-brand/5 w-fit px-3 py-1 rounded-full">
+                        <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
+                        Credit Reset Pending (Offline)
+                    </div>
+                </div>
+                <div class="bg-slate-900/50 flex flex-col h-[350px] md:h-[400px]">
+                    <div id="chat-window" class="flex-1 p-6 overflow-y-auto space-y-4 text-sm">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-brand flex-shrink-0 flex items-center justify-center text-[10px] font-bold">AI</div>
+                            <div class="bg-slate-800 p-4 rounded-2xl rounded-tl-none text-slate-300">
+                                Hello! I'm currently refreshing my credits. How can I help you regarding Iniubong's projects once I'm back online?
+                            </div>
+                        </div>
+                    </div>
+                    <form id="chat-form" class="p-4 border-t border-white/5 flex gap-2">
+                        <input type="text" id="user-input" placeholder="Type a question..." class="flex-1 bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand transition-all" disabled>
+                        <button type="submit" class="bg-brand/50 text-white px-4 py-2 rounded-xl text-sm font-bold cursor-not-allowed" disabled>Send</button>
+                    </form>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="py-12 text-center space-y-12">
+        <section id="contact" class="py-12 text-center space-y-12 pb-24">
             <h2 class="text-3xl md:text-5xl font-extrabold text-white">Work with me</h2>
             <div class="bg-brand p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-indigo-500/20 inline-block w-full max-w-md space-y-6">
-                <p class="text-white font-medium text-sm md:text-base">Currently accepting new projects and consultations.</p>
+                <p class="text-white font-medium">Currently accepting new projects and consultations for Q1 2026.</p>
                 <a href="mailto:your-email@example.com" class="block bg-white text-brand py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform min-h-[44px]">
-                    Email Me Directly
+                    Email Me Directly to Book
                 </a>
             </div>
         </section>
     </main>
 
     <footer class="py-12 text-center border-t border-white/5 text-slate-600 text-[10px] uppercase tracking-widest font-bold">
-        &copy; 2026 Iniubong Ebong. All Rights Reserved.
+        &copy; 2026 Iniubong Ebong. Engineered on Mobile.
     </footer>
 
     <script>
+        /* Part 1: Intersection Observer (Reveal on Scroll) */
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -128,8 +156,36 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('section').forEach((el) => observer.observe(el));
+
+        /* Part 2: AI Chat Proxy (Calls Google Cloud Run /api/chat) */
+        const chatForm = document.getElementById('chat-form');
+        const chatWindow = document.getElementById('chat-window');
+        const userInput = document.getElementById('user-input');
+
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const message = userInput.value;
+            userInput.value = '';
+
+            const userMsg = `<div class="flex items-start gap-3 justify-end"><div class="bg-indigo-600 p-4 rounded-2xl rounded-tr-none text-white shadow-lg text-sm">${message}</div></div>`;
+            chatWindow.insertAdjacentHTML('beforeend', userMsg);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+
+            try {
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message })
+                });
+                const data = await response.json();
+                const aiMsg = `<div class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-brand flex-shrink-0 flex items-center justify-center text-[10px] font-bold">AI</div><div class="bg-slate-800 p-4 rounded-2xl rounded-tl-none text-slate-300 text-sm">${data.answer}</div></div>`;
+                chatWindow.insertAdjacentHTML('beforeend', aiMsg);
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+            } catch (err) {
+                console.error("AI Assistant Offline");
+            }
+        });
     </script>
 </body>
-</html>
-
+    </html>
     
