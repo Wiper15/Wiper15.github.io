@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniubong Ebong | AI & Web3 Engineer</title>
+    
+    <!-- SEO & Social Meta Tags -->
+    <meta property="og:title" content="Iniubong Ebong | AI & Web3 Engineer">
+    <meta property="og:description" content="Full-Stack Developer specializing in AI agents, Web3 infrastructure, and autonomous systems. Available for Q1 2026 contracts.">
+    <meta property="og:image" content="https://your-domain.com/assets/images/profile.jpg">
+    <meta property="og:url" content="https://google-ai-portfolio.run.app">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="AI & Web3 Engineer | Full-Stack Developer | Autonomous Systems Specialist">
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
@@ -106,9 +116,9 @@
                     <p class="text-slate-400 text-sm md:text-base leading-relaxed">
                         I've trained an agent on my project history and technical philosophy. Ask "Iniubong's Assistant" anything about my work.
                     </p>
-                    <div class="flex items-center gap-3 text-brand text-[10px] font-bold tracking-widest uppercase bg-brand/5 w-fit px-3 py-1 rounded-full">
-                        <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
-                        Credit Reset Pending (Offline)
+                    <div id="status-indicator" class="flex items-center gap-3 text-brand text-[10px] font-bold tracking-widest uppercase bg-brand/5 w-fit px-3 py-1 rounded-full">
+                        <span id="status-dot" class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
+                        <span id="status-text">Checking Connection...</span>
                     </div>
                 </div>
                 <div class="bg-slate-900/50 flex flex-col h-[350px] md:h-[400px]">
@@ -116,13 +126,13 @@
                         <div class="flex items-start gap-3">
                             <div class="w-8 h-8 rounded-full bg-brand flex-shrink-0 flex items-center justify-center text-[10px] font-bold">AI</div>
                             <div class="bg-slate-800 p-4 rounded-2xl rounded-tl-none text-slate-300">
-                                Hello! I'm currently refreshing my credits. How can I help you regarding Iniubong's projects once I'm back online?
+                                Hello! I'm Iniubong's AI assistant. Ask me anything about his projects, experience, or technical background.
                             </div>
                         </div>
                     </div>
                     <form id="chat-form" class="p-4 border-t border-white/5 flex gap-2">
                         <input type="text" id="user-input" placeholder="Type a question..." class="flex-1 bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand transition-all" disabled>
-                        <button type="submit" class="bg-brand/50 text-white px-4 py-2 rounded-xl text-sm font-bold cursor-not-allowed" disabled>Send</button>
+                        <button type="submit" class="bg-brand text-white px-4 py-2 rounded-xl text-sm font-bold hover:bg-brand/90 transition-colors min-h-[44px] disabled:opacity-50 disabled:cursor-not-allowed" disabled>Send</button>
                     </form>
                 </div>
             </div>
@@ -132,7 +142,7 @@
             <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tighter">Ready to build the future?</h2>
             <div class="bg-brand p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-indigo-500/20 inline-block w-full max-w-md space-y-6">
                 <p class="text-white font-medium">Currently accepting new projects and consultations for Q1 2026.</p>
-                <a href="mailto:your-email@example.com" class="block bg-white text-brand py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform min-h-[44px]">
+                <a href="mailto:your-email@example.com" class="block bg-white text-brand py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform min-h-[44px] flex items-center justify-center">
                     Email Me Directly to Book
                 </a>
             </div>
@@ -144,6 +154,7 @@
     </footer>
 
     <script>
+        // Scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -152,7 +163,140 @@
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('section').forEach((el) => observer.observe(el));
+
+        // ======================
+        // CHAT FUNCTIONALITY
+        // ======================
+        
+        const chatForm = document.getElementById('chat-form');
+        const userInput = document.getElementById('user-input');
+        const chatWindow = document.getElementById('chat-window');
+        const statusText = document.getElementById('status-text');
+        const statusDot = document.getElementById('status-dot');
+        
+        // Update this with your actual Cloud Run URL
+        const API_URL = ''; // Leave empty for same-domain requests during development
+        
+        // Check backend health on page load
+        async function checkBackendStatus() {
+            try {
+                const healthCheck = await fetch('/health', { 
+                    method: 'GET',
+                    signal: AbortSignal.timeout(3000)
+                });
+                
+                if (healthCheck.ok) {
+                    statusText.textContent = 'Online';
+                    statusDot.className = 'w-2 h-2 rounded-full bg-green-400';
+                    userInput.disabled = false;
+                    chatForm.querySelector('button').disabled = false;
+                    console.log('✅ Backend is online');
+                } else {
+                    throw new Error('Health check failed');
+                }
+            } catch (error) {
+                statusText.textContent = 'Deploy Backend';
+                statusDot.className = 'w-2 h-2 rounded-full bg-orange-400 animate-pulse';
+                userInput.disabled = true;
+                chatForm.querySelector('button').disabled = true;
+                console.warn('⚠️ Backend offline:', error.message);
+            }
+        }
+
+        // Check status on load and periodically
+        checkBackendStatus();
+        setInterval(checkBackendStatus, 30000);
+
+        // Handle chat form submission
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            // Display user message
+            const userMsg = document.createElement('div');
+            userMsg.className = 'flex items-start gap-3 justify-end';
+            userMsg.innerHTML = `
+                <div class="bg-brand/20 p-4 rounded-2xl rounded-tr-none text-slate-200 max-w-xs break-words">
+                    ${escapeHtml(message)}
+                </div>
+                <div class="w-8 h-8 rounded-full bg-slate-700 flex-shrink-0 flex items-center justify-center text-[10px] font-bold">U</div>
+            `;
+            chatWindow.appendChild(userMsg);
+            userInput.value = '';
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+
+            // Show loading indicator
+            const loadingMsg = document.createElement('div');
+            loadingMsg.className = 'flex items-start gap-3';
+            loadingMsg.id = 'loading-msg';
+            loadingMsg.innerHTML = `
+                <div class="w-8 h-8 rounded-full bg-brand flex-shrink-0 flex items-center justify-center">
+                    <div class="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full"></div>
+                </div>
+                <div class="bg-slate-800 p-4 rounded-2xl rounded-tl-none text-slate-300">
+                    Thinking...
+                </div>
+            `;
+            chatWindow.appendChild(loadingMsg);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+
+            // Send to backend
+            try {
+                const response = await fetch(`${API_URL}/api/chat`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message })
+                });
+
+                loadingMsg.remove();
+
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+
+                // Display AI response
+                const aiMsg = document.createElement('div');
+                aiMsg.className = 'flex items-start gap-3';
+                aiMsg.innerHTML = `
+                    <div class="w-8 h-8 rounded-full bg-brand flex-shrink-0 flex items-center justify-center text-[10px] font-bold">AI</div>
+                    <div class="bg-slate-800 p-4 rounded-2xl rounded-tl-none text-slate-300 max-w-xs break-words">
+                        ${escapeHtml(data.response || data.answer || 'No response')}
+                    </div>
+                `;
+                chatWindow.appendChild(aiMsg);
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+
+            } catch (error) {
+                console.error('Chat error:', error);
+                
+                const loadingMsg = document.getElementById('loading-msg');
+                if (loadingMsg) loadingMsg.remove();
+                
+                const errorMsg = document.createElement('div');
+                errorMsg.className = 'flex items-start gap-3';
+                errorMsg.innerHTML = `
+                    <div class="w-8 h-8 rounded-full bg-red-600 flex-shrink-0 flex items-center justify-center text-[10px] font-bold">⚠</div>
+                    <div class="bg-red-900/30 p-4 rounded-2xl rounded-tl-none text-red-300 text-xs max-w-xs">
+                        Backend is offline. Make sure server.js is deployed to Cloud Run.
+                    </div>
+                `;
+                chatWindow.appendChild(errorMsg);
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+            }
+        });
+
+        // Utility function to escape HTML for security
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
     </script>
 </body>
-                        </html>
-                        
+</html>
